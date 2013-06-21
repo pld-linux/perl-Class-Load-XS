@@ -19,7 +19,7 @@ BuildRequires:	perl-Module-Build >= 0.3601
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Class-Load >= 0.15
+BuildRequires:	perl-Class-Load >= 0.20
 BuildRequires:	perl-Module-Implementation >= 0.04
 BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Requires
