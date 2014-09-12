@@ -61,6 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Class/Load/XS.pm
 %dir %{perl_vendorarch}/auto/Class/Load
 %dir %{perl_vendorarch}/auto/Class/Load/XS
-%{perl_vendorarch}/auto/Class/Load/XS/XS.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Class/Load/XS/XS.so
 %{_mandir}/man3/Class::Load::XS.3pm*
