@@ -9,7 +9,7 @@ Summary:	Class::Load::XS - XS implementation of parts of Class::Load
 Summary(pl.UTF-8):	Class::Load::XS - implementacja XS części modułu Class::Load
 Name:		perl-Class-Load-XS
 Version:	0.06
-Release:	2
+Release:	3
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
