@@ -8,14 +8,14 @@
 Summary:	Class::Load::XS - XS implementation of parts of Class::Load
 Summary(pl.UTF-8):	Class::Load::XS - implementacja XS części modułu Class::Load
 Name:		perl-Class-Load-XS
-Version:	0.06
-Release:	4
+Version:	0.09
+Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a3e73647f84eb8bd26847c3dda78f0d3
+# Source0-md5:	98eb8daf7f23c872fc7f503a7e34f598
 URL:		http://search.cpan.org/dist/Class-Load-XS/
-BuildRequires:	perl-Module-Build >= 0.3601
+BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -39,17 +39,19 @@ Więcej szczegółów na temat API w Class::Load.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make} \
+	CC="%{__cc}" \
+	OPTIMIZE="%{rpmcflags}"
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} pure_install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
