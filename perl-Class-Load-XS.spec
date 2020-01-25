@@ -4,7 +4,6 @@
 #
 %define		pdir	Class
 %define		pnam	Load-XS
-%include	/usr/lib/rpm/macros.perl
 Summary:	Class::Load::XS - XS implementation of parts of Class::Load
 Summary(pl.UTF-8):	Class::Load::XS - implementacja XS części modułu Class::Load
 Name:		perl-Class-Load-XS
