@@ -7,16 +7,17 @@
 Summary:	Class::Load::XS - XS implementation of parts of Class::Load
 Summary(pl.UTF-8):	Class::Load::XS - implementacja XS części modułu Class::Load
 Name:		perl-Class-Load-XS
-Version:	0.09
-Release:	7
+Version:	0.10
+Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	98eb8daf7f23c872fc7f503a7e34f598
-URL:		http://search.cpan.org/dist/Class-Load-XS/
+# Source0-md5:	2c15488b5b28afadbb5315e44a721e05
+URL:		https://metacpan.org/release/Class-Load-XS
 BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Class-Load >= 0.20
 BuildRequires:	perl-Module-Implementation >= 0.04
