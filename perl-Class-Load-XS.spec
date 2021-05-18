@@ -21,6 +21,7 @@ BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Class-Load >= 0.20
 BuildRequires:	perl-Module-Implementation >= 0.04
+BuildRequires:	perl-Test-Class
 BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Needs
 BuildRequires:	perl-Test-Requires
