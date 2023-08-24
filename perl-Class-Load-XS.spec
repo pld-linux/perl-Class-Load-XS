@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Class
 %define		pnam	Load-XS
@@ -13,7 +13,7 @@ License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	2c15488b5b28afadbb5315e44a721e05
-URL:		https://metacpan.org/release/Class-Load-XS
+URL:		https://metacpan.org/dist/Class-Load-XS
 BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
